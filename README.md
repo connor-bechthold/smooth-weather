@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+If you want to clone this app, make sure to enter your own API KEY from https://openweathermap.org/ in the "YOUR_API_KEY_HERE" section of .env-sample
 
 ## Available Scripts
 
