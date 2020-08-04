@@ -5,6 +5,8 @@ const fetch = require("node-fetch");
 require("dotenv").config();
 const port = process.env.PORT || 5000;
 
+app.use(express.static(path.join(__dirname, "client/build")));
+
 app.get("/weather/:city/:country", async (request, response) => {
 	let cityValue = request.params.city;
 	let countryValue = request.params.country;
@@ -14,6 +16,10 @@ app.get("/weather/:city/:country", async (request, response) => {
 	);
 	let data = await fetch_request.json();
 	response.json(data);
+});
+
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 
 // console.log that your server is up and running
