@@ -13,7 +13,7 @@ function Input(props) {
 					paddingLeft: "4px",
 				}}
 			>
-				<i className="fa fa-cloud"></i>Weather App{" "}
+				<i className="fa fa-cloud"></i>SmoothWeather{" "}
 			</p>
 			<form onSubmit={props.handleSubmit} className="input-flex">
 				<input
